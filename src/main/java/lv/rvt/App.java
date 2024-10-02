@@ -13,10 +13,8 @@ public class App
 
 
 
-        while (reiz != 0) {
-            printText();
-            reiz = reiz -1;
-        }
+            printUntilNumber(reiz);
+         
 
 
         scanner.close();
@@ -24,8 +22,10 @@ public class App
     }
 
 
-    public static void printText(){
-        System.out.println("In a hole in the ground there lived a method");
-
+    public static void printUntilNumber(int number){
+        int num = 0;
+        while (num < number) {
+            System.out.println(num+=1);       
+        }
     }
 }
