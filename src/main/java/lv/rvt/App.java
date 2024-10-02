@@ -7,31 +7,25 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        int numberN = 0;
-        int numberW = 0; 
-        while (true) {
-            System.out.println("Give a number: ");
-            int number = Integer.valueOf(scanner.nextLine());
-            
+        System.out.println("How many Times ?");
+
+        int reiz = Integer.valueOf(scanner.nextLine());
 
 
-            if (number == 0) {
-                break;
-                
-            }
-            else{
-                numberN = number + number;
-                numberW += 1;
-                
-            }
-            
+
+        while (reiz != 0) {
+            printText();
+            reiz = reiz -1;
         }
-        System.out.println("Number of numbers:" + numberW);
-        System.out.println("Sum of the numbers:" + numberN);
 
-        
 
+        scanner.close();
+
+    }
+
+
+    public static void printText(){
+        System.out.println("In a hole in the ground there lived a method");
 
     }
 }
-
