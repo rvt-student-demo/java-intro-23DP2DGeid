@@ -7,13 +7,16 @@ public class App
     {
         Scanner scanner = new Scanner(System.in);
 
-        System.out.println("How many Times ?");
+        System.out.println("Enter range: From how much");
 
-        int reiz = Integer.valueOf(scanner.nextLine());
+        int range = Integer.valueOf(scanner.nextLine());
+
+        System.out.println("To how much");
+
+        int range2 = Integer.valueOf(scanner.nextLine());
 
 
-
-            printUntilNumber(reiz);
+            divisibleByThreeInRange(range, range2);
          
 
 
@@ -22,10 +25,17 @@ public class App
     }
 
 
-    public static void printUntilNumber(int number){
-        int num = 0;
-        while (num < number) {
-            System.out.println(num+=1);       
-        }
+    public static void divisibleByThreeInRange(int beginning, int end){
+
+        for(int reiz = beginning; end + 1 > reiz; reiz++){
+
+            if (reiz % 3 == 0) {
+                System.out.println(reiz);
+                
+            }
+
+        } 
+        
+
     }
 }
