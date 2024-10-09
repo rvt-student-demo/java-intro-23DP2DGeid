@@ -1,17 +1,18 @@
 package lv.rvt;
-import java.util.Scanner;
+//import java.util.Scanner;
 
 public class App 
 {
     public static void main( String[] args )
     {
-        Scanner scanner = new Scanner(System.in);
-        int hundred = Integer.valueOf(scanner.nextLine());
-
-        while (hundred<=100) {
-            System.out.println(hundred);
-            hundred++;
-        }
-scanner.close();
+            stars.printStars(5);
+            stars.printStars(3);
+            stars.printStars(9);
+            System.out.println("");
+            stars.printSquare(3);
+            System.out.println("");
+            stars.printRectangle(17, 3);
+            System.out.println("");
+            stars.printTriangle(4);
     }
 }
