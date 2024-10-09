@@ -1,18 +1,30 @@
 package lv.rvt;
-//import java.util.Scanner;
+import java.util.Scanner;
 
 public class App 
 {
     public static void main( String[] args )
+    
     {
-            stars.printStars(5);
-            stars.printStars(3);
-            stars.printStars(9);
-            System.out.println("");
-            stars.printSquare(3);
-            System.out.println("");
-            stars.printRectangle(17, 3);
-            System.out.println("");
-            stars.printTriangle(4);
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Give a number:");
+        int fact = Integer.valueOf(scanner.nextLine());
+        int ans = 1;
+        if(fact == 0)
+        {
+            System.out.println(1);
+            return;
+            
+        }
+
+        for(int factorial = 1; fact + 1 > factorial ; factorial++)
+        {
+            ans *= factorial;
+        }
+        System.out.println(ans);
+
+
+
+        scanner.close();
     }
 }
