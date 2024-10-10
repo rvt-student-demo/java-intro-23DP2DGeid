@@ -30,4 +30,47 @@ public class stars {
             printStars(tri);
         }
     }
+    public static void printSpaces(int number){
+        for(int spc = 1; number + 1 > spc; spc++){
+            System.out.print(" ");
+
+        }
+
+    }
+    public static void printTriangle2(int size){
+        for(int rig = 1; rig < size + 1; rig++){
+
+            printSpaces(size-rig);
+            printStars(rig);
+            
+
+        }
+
+
+    }
+    public static void christmasTree(int height){
+        int Crstars = 1;
+
+        for(int tree = 1; tree < height + 1; tree++){
+
+            printSpaces(height-tree);
+            printStars(Crstars);
+
+            Crstars += 2;
+
+        }
+        for(int pen = 0; pen < 2; pen++ ){
+            printSpaces(height-2);
+            printStars(3);
+            
+
+
+        }
+        
+
+
+
+    }
+
+
 }
