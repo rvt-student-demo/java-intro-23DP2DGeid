@@ -14,7 +14,13 @@ public class decreasing {
 
     public void decrement() {
        value--;
+       if (value < 0) {
+            value =0;
+       }
        
+    }
+    public void reset(){
+        value=0;
     }
 
     
