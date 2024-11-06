@@ -8,13 +8,16 @@ public class App
     {
         Product nam = new Product("banan",1.3, 5 );
         decreasing dec = new decreasing(100);
-        //nam.printProduct();
-        dec.printValue();
-        dec.decrement();
-        dec.reset();
-        dec.printValue();
-        dec.decrement();
-        dec.printValue();
+        Agent bond = new Agent("James", "Bond");
+        
+        bond.toString(); //Prints Nothing
+
+        System.out.println(bond);
+
+        Agent ionic = new Agent("Ionic", "Bond");
+
+        System.out.println(ionic);
+
     }
     
 }
