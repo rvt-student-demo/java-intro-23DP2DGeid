@@ -2,14 +2,14 @@ package lv.rvt;
 
 public class Statistics {
     private int count = 0;
+    int numbers = 0;
     
-    int number = 0;
     public Statistics() {
         
     }
 
     public void addNumber(int number) {
-        this.number += number;
+        this.numbers += number;
         count++;
 
 
@@ -18,5 +18,14 @@ public class Statistics {
     public int getCount() 
     {
         return count;
+    }
+
+    public int sum() 
+    {
+      return numbers;
+    }
+
+    public double average() {
+        return Double.valueOf(numbers)/count;
     }
 }
