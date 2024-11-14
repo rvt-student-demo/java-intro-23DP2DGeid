@@ -3,13 +3,14 @@ package lv.rvt;
 public class Persom {
     private int age;
     private String name;
+    private int heigth;
+    private int weigth;
 
-
-    public Persom(String initialName){
+    public Persom(String initialName, int age, int weigth, int heigth){
         this.name = initialName;
-    }
-    public Persom(int age) {
         this.age = age;
+        this.weigth = weigth;
+        this.heigth = heigth;
     }
 
     public void printPerson() {
