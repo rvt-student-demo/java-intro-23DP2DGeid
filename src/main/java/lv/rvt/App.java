@@ -8,27 +8,13 @@ import java.util.Arrays;
 public class App 
 {
      public static void main(String[] args) throws Exception  { 
-        BufferedReader reader = Utils.getReader("persom.csv");
-        
-        ArrayList <Persom> persomList = new ArrayList();
+        ArrayList<Persom> persoms = PersomManager.getPersomList();
 
-        int summ = 0;
-        String list;
-
-        reader.readLine();
-
-        while ((list = reader.readLine()) != null) {
-            String[] parts = list.split(", ");
-            Persom nam = new Persom(parts[0], Integer.valueOf(parts[1]), Integer.valueOf(parts[2]), Integer.valueOf(parts[3]));
-            persomList.add(nam);
-        }
-
-        for (Persom element : persomList) {
-            System.out.println(element);
-            summ += element.getAge();
+        for (Persom persom : persoms) {
+            System.out.println(persom);
 
           }
-          System.out.println("Vidējais vecums " + summ/4);
+
 			
 }
 }
