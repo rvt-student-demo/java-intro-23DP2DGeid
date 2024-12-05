@@ -1,7 +1,9 @@
 package lv.rvt;
 
 import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.IOException;
+import java.nio.file.StandardOpenOption;
 import java.util.ArrayList;
 
 
@@ -20,7 +22,12 @@ public class PersomManager {
                 return persomList; 
 
     }
-    public static void addPersom(Person persom) throws Exception{
+    public static void addPerson(Person person) throws Exception{
+        BufferedWriter writer =
+        Helper.getWriter("persons.csv", StandardOpenOption.APPEND);
         
+        writer.write("12, Admin");
+        writer.newLine();
+        writer.close();
     }
 }

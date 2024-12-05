@@ -9,13 +9,25 @@ import java.util.Arrays;
 
 public class App 
 {
-     public static void main(String[] args) throws Exception 
-    { 
-        BufferedWriter writer =
-        Helper.getWriter("persons.csv", StandardOpenOption.APPEND);
-        
-        writer.write("12, Admin");
-        writer.newLine();
-        writer.close();
+    public static void main(String[] args) {
+
+        HealthStation childrensHospital = new HealthStation();
+    
+        Person ethan = new Person("Ethan", 1, 110, 7);
+        Person peter = new Person("Peter", 33, 176, 85);
+    
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+    
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(peter);
+    
+        System.out.println("weighings performed: " + childrensHospital.weighings());
+    
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+        childrensHospital.weigh(ethan);
+    
+        System.out.println("weighings performed: " + childrensHospital.weighings());
     }
 }
