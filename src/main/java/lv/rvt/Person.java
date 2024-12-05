@@ -19,6 +19,9 @@ public class Person {
     public int getWeight(){
        return weigth;
     }
+    public int getHeight() {
+        return heigth;
+    }
     public int feeds(){
         return this.weigth++;
     }
@@ -35,6 +38,7 @@ public class Person {
     public String getName() {
         return name;
     }
+    
 
 
     

@@ -8,8 +8,8 @@ import java.util.ArrayList;
 
 
 public class PersomManager {
-    public static ArrayList<Person>getPersomList() throws IOException{
-        BufferedReader reader = Helper.getReader("persom.csv");
+    public static ArrayList<Person>getPersomList() throws Exception{
+        BufferedReader reader = Helper.getReader("persons.csv");
         
         ArrayList <Person> persomList = new ArrayList();
         reader.readLine();
@@ -22,12 +22,17 @@ public class PersomManager {
                 return persomList; 
 
     }
-    public static void addPerson(Person person) throws Exception{
-        BufferedWriter writer =
-        Helper.getWriter("persons.csv", StandardOpenOption.APPEND);
-        
-        writer.write("12, Admin");
-        writer.newLine();
-        writer.close();
+    public static void addPerson(Person person) throws Exception {
+        try (BufferedWriter writer = Helper.getWriter("persons.csv", StandardOpenOption.APPEND)) {
+           
+            String personData = String.format("%s, %d, %d, %d", 
+                person.getName(), 
+                person.getAge(), 
+                person.getHeight(), 
+                person.getWeight());
+            writer.write(personData);
+            writer.newLine();
+        }
     }
+
 }

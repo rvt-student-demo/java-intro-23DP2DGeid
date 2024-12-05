@@ -10,10 +10,10 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 public class Helper {
 
-    public static BufferedReader getReader(String filename) throws IOException{
+    public static BufferedReader getReader(String filename) throws Exception{
         return Files.newBufferedReader(getFilePath(filename));
     }
-    public static BufferedWriter getWriter(String filename, StandardOpenOption option) throws IOException{
+    public static BufferedWriter getWriter(String filename, StandardOpenOption option) throws Exception{
         return Files.newBufferedWriter(getFilePath(filename), option);
 
     }
