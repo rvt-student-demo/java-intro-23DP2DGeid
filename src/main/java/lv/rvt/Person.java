@@ -2,42 +2,20 @@ package lv.rvt;
 
 
 public class Person {
-    private int age;
-    private String name;
-    private int heigth;
-    private int weigth;
-    private int weighings;
+    private String initialName;
+    private String adress;
 
-
-    public Person(String initialName, int age, int heigth, int weigth){
-        this.name = initialName;
-        this.age = age;
-        this.weigth = weigth;
-        this.heigth = heigth;
-       
+  
+    public Person(String initialName, String adress){
+        this.initialName = initialName;
+        this.adress = adress;
+        
     }
-    public int getWeight(){
-       return weigth;
-    }
-    public int getHeight() {
-        return heigth;
-    }
-    public int feeds(){
-        return this.weigth++;
-    }
- 
-    public int getAge()
-    {
-        return age;
-    }
-    
-    public String toString(){
-        return this.name + " " +  this.age + " " +this.weigth  + " " + this.heigth ;
+    public String toString() {
+        return this.initialName + "\n"+ " " + this.adress;
+        
     }
 
-    public String getName() {
-        return name;
-    }
     
 
 

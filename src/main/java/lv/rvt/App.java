@@ -8,11 +8,16 @@ import java.util.Arrays;
 
 public class App 
 {
+    public static void printPersons(ArrayList<Person> persons){
+        System.out.println(persons);
 
+    }
     public static void main(String[] args)  {
-        Box box = new  Box( 2.5, 5.0, 6.0 ) ;
 
+        ArrayList<Person> persons = new ArrayList<Person>();
+        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
+        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
+        printPersons(persons);
         
-   
     }
 }

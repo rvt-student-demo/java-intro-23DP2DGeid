@@ -1,22 +1,22 @@
 package lv.rvt;
 
-public class HealthStation {
+//public class HealthStation {
 
-    private int weighings = 0;
+    //private int weighings = 0;
 
-        public int weigh(Person person) {
-            weighings++;
-            return person.getWeight() ;
+       // public int weigh(Person person) {
+           // weighings++;
+           // return person.getWeight() ;
             
-        }
-        public void feed(Person person){
-            person.feeds();
-        }
-        public int weighings(){
-            return this.weighings;
-        }
+       // }
+        //public void feed(Person person){
+            //person.feeds();
+        //}
+        //public int weighings(){
+        //    return this.weighings;
+        //}
     
         
 
 
-}
+//}
