@@ -13,11 +13,12 @@ public class App
 
     }
     public static void main(String[] args)  {
-
-        ArrayList<Person> persons = new ArrayList<Person>();
-        persons.add(new Teacher("Ada Lovelace", "24 Maddox St. London W1S 2QN", 1200));
-        persons.add(new Student("Ollie", "6381 Hollywood Blvd. Los Angeles 90028"));
-        printPersons(persons);
+        ProductWarehouse juice = new ProductWarehouse("Juice", 1000.0);
+        juice.addToWarehouse(1000.0);
+        juice.takeFromWarehouse(11.3);
+        System.out.println(juice.getName()); 
+        juice.addToWarehouse(1.0);
+        System.out.println(juice);   
         
     }
 }
