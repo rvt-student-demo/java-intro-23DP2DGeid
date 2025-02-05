@@ -1,7 +1,7 @@
 package lv.rvt;
 
 
-public class Person {
+abstract class Person {
     private String initialName;
     private String adress;
 
